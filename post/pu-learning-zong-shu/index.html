@@ -1,22 +1,95 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://JJYsRepo.github.io</id>
-    <title>Tian Qin </title>
-    <updated>2022-02-13T14:04:06.265Z</updated>
-    <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://JJYsRepo.github.io"/>
-    <link rel="self" href="https://JJYsRepo.github.io/atom.xml"/>
-    <subtitle>Does the color of the sky mean anything special to you? It does to me. A hell of a lot.</subtitle>
-    <logo>https://JJYsRepo.github.io/images/avatar.png</logo>
-    <icon>https://JJYsRepo.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2022, Tian Qin </rights>
-    <entry>
-        <title type="html"><![CDATA[PU Learning 综述]]></title>
-        <id>https://JJYsRepo.github.io/post/pu-learning-zong-shu/</id>
-        <link href="https://JJYsRepo.github.io/post/pu-learning-zong-shu/">
-        </link>
-        <updated>2022-02-13T06:40:30.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="1-pu学习定义">1. PU学习定义</h2>
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>PU Learning 综述 | Tian Qin </title>
+<link rel="shortcut icon" href="https://JJYsRepo.github.io/favicon.ico?v=1644760784788">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://JJYsRepo.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="PU Learning 综述 | Tian Qin  - Atom Feed" href="https://JJYsRepo.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="1. PU学习定义
+PU学习试图解决只有正样本和未标记样本（包含正样本和负样本）情形下的二分类问题。不同于有监督二分类问题记号(x,y)，PU学习使用(x, y, s) 表征一个样本。y是样本标签，s是样本是否被标记。如果一个样本被标记，则..." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://JJYsRepo.github.io">
+  <img class="avatar" src="https://JJYsRepo.github.io/images/avatar.png?v=1644760784788" alt="">
+  </a>
+  <h1 class="site-title">
+    Tian Qin 
+  </h1>
+  <p class="site-description">
+    Does the color of the sky mean anything special to you? It does to me. A hell of a lot.
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              PU Learning 综述
+            </h2>
+            <div class="post-info">
+              <span>
+                2022-02-13
+              </span>
+              <span>
+                6 min read
+              </span>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <h2 id="1-pu学习定义">1. PU学习定义</h2>
 <p>PU学习试图解决只有正样本和未标记样本（包含正样本和负样本）情形下的二分类问题。不同于有监督二分类问题记号(x,y)，PU学习使用(x, y, s) 表征一个样本。y是样本标签，s是样本是否被标记。如果一个样本被标记，则该样本一定是正样本。反之，如果一个样本是正样本，则其未必被标记。<br>
 真实的正样本被选出后标记为1的概率被称为倾向评分(<em>propensity score</em>)，记为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>e</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mi>P</mi><mi>r</mi><mo>(</mo><mi>s</mi><mo>=</mo><mn>1</mn><mi mathvariant="normal">∣</mi><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo>=</mo><mn>1</mn><mo>)</mo></mrow><annotation encoding="application/x-tex">e(x) = Pr(s = 1 | x, y = 1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">e</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mopen">(</span><span class="mord mathdefault">s</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mord">∣</span><span class="mord mathdefault">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">)</span></span></span></span>。于是，基于贝叶斯规则和条件概率易得被打标的正样本分布和实际正样本分布的相关关系：</p>
 <p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>f</mi><mi>l</mi></msub><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mfrac><mrow><mi>e</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mi>c</mi></mfrac><msub><mi>f</mi><mo>+</mo></msub><mo>(</mo><mi>x</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">f_{l}(x) = \frac{e(x)}{c} f_{+}(x)
@@ -72,15 +145,97 @@
 样本可分，类似于SVM中的一个概念。即在N维特征空间中存在一个平面，使得真实的正负样本被分开。<br>
 <em>Smoothness</em><br>
 如果样本特征x1和x2相似，则<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi><mi>r</mi><mo>(</mo><mi>y</mi><mo>=</mo><mn>1</mn><mi mathvariant="normal">∣</mi><msub><mi>x</mi><mn>1</mn></msub><mo>)</mo></mrow><annotation encoding="application/x-tex">Pr(y = 1 | x_{1})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mord">∣</span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span> 和 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi><mi>r</mi><mo>(</mo><mi>y</mi><mo>=</mo><mn>1</mn><mi mathvariant="normal">∣</mi><msub><mi>x</mi><mn>2</mn></msub><mo>)</mo></mrow><annotation encoding="application/x-tex">Pr(y = 1 | x_{2})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mord">∣</span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span>  也相似。该假设使得从无标记样本中识别出负样本成为可靠的过程。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Welcome to my personal blog]]></title>
-        <id>https://JJYsRepo.github.io/post/aaa/</id>
-        <link href="https://JJYsRepo.github.io/post/aaa/">
-        </link>
-        <updated>2022-02-13T05:14:19.000Z</updated>
-        <content type="html"><![CDATA[<p>欢迎来到我的个人博客。这个博客使用简洁高效的Gridea搭建😃。</p>
-]]></content>
-    </entry>
-</feed>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#1-pu%E5%AD%A6%E4%B9%A0%E5%AE%9A%E4%B9%89">1. PU学习定义</a></li>
+<li><a href="#2-pu%E5%AD%A6%E4%B9%A0%E5%9C%BA%E6%99%AF">2. PU学习场景</a></li>
+<li><a href="#3-pu%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E5%81%87%E8%AE%BE">3. PU学习基本假设</a>
+<ul>
+<li><a href="#31-%E6%89%93%E6%A0%87%E6%9C%BA%E5%88%B6%E5%81%87%E8%AE%BE">3.1 打标机制假设</a>
+<ul>
+<li><a href="#311-scar">3.1.1 SCAR</a></li>
+<li><a href="#312-sar">3.1.2 SAR</a></li>
+<li><a href="#313-prob-gap-pu-pgpu">3.1.3 Prob GAP PU (PGPU)</a></li>
+</ul>
+</li>
+<li><a href="#32-%E6%95%B0%E6%8D%AE%E5%88%86%E5%B8%83%E5%81%87%E8%AE%BE">3.2 数据分布假设</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://JJYsRepo.github.io/post/aaa/">
+              <h3 class="post-title">
+                Welcome to my personal blog
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://JJYsRepo.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
