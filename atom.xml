@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://JJYsRepo.github.io</id>
-    <title>Tian Qin </title>
-    <updated>2022-02-13T14:04:06.265Z</updated>
+    <title>Tian</title>
+    <updated>2022-02-13T14:06:37.309Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://JJYsRepo.github.io"/>
     <link rel="self" href="https://JJYsRepo.github.io/atom.xml"/>
     <subtitle>Does the color of the sky mean anything special to you? It does to me. A hell of a lot.</subtitle>
     <logo>https://JJYsRepo.github.io/images/avatar.png</logo>
     <icon>https://JJYsRepo.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2022, Tian Qin </rights>
+    <rights>All rights reserved 2022, Tian</rights>
     <entry>
         <title type="html"><![CDATA[PU Learning 综述]]></title>
         <id>https://JJYsRepo.github.io/post/pu-learning-zong-shu/</id>
